@@ -1,0 +1,35 @@
+.search-results {
+  .site-main.container {
+    max-width: 890px;
+    padding: 40px 20px;
+
+    @include tablet {
+      padding: 60px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    article {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: $base-border;
+
+
+      h2 {
+        @extend h3;
+        margin-bottom: 0px;
+        a {
+          text-decoration: none;
+        }
+      }
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+.posts-filter_container {
+  background-color: $light-gray;
+  padding: 40px 0;
+
+  .post-tags {
+    max-width: 850px;
+    @include tablet {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .blog-filter-clear {
+      //padding: 20px 0 0 0px;
+      margin-top: 10px;
+      @extend .button;
+      i {
+        padding-right: 5px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+      @include tablet {
+        padding: 0 0 0 15px;
+        width: 90px;
+        border: none;
+        text-transform: none;
+        font-size: 16px;
+        font-family: $base-font-family;
+        i {
+          font-size: 16px;
+          font-weight: 400;
+          padding: 0 5px 0 0px;
+
+        }
+        &:hover {
+          color: darken($light-blue, 10%);
+          background: none;
+        }
+      }
+    }
+
+    .search {
+      width: 100%;
+      margin: 0 0 10px;
+
+      @include tablet {
+        margin: 0 10px 0 0;
+        width: 50%;
+      }
+      input {
+        margin: 0;
+      }
+    }
+
+    .select {
+      width: 100%;
+      margin: 0;
+
+      @include tablet {
+        margin: 0 0px 0 10px;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.posts-listing_container {
+  max-width: 850px;
+  padding: 40px 20px;
+
+  @include tablet {
+    padding: 80px 20px 40px;
+  }
+
+  .post {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: $base-border;
+
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .post_cat-name {
+    @extend h4;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .post_excerpt {
+    p {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    .excerpt-read-more {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}
+
+.posts-pagination_container {
+  max-width: 900px;
+  padding: 0px 20px 40px;
+  text-align: center;
+
+  @include tablet {
+    padding: 0px 20px 80px;
+  }
+
+  .pagination_link {
+
+    i {
+      padding: 0 10px;
+    }
+
+    &.selected {
+      padding-right: 3px;
+    }
+
+    &.disabled {
+      opacity: .5;
+      color: #ccc;
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+}

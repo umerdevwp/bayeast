@@ -1,0 +1,60 @@
+.home-quick-links {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin: 40px auto 30px;
+	padding: 0 10px;
+
+	@include mobile {
+		margin: 40px auto 20px;
+	}
+
+	@include tablet {
+		margin: 40px auto 20px;
+	}
+
+	@include desktop {
+		margin: 80px auto;
+	}
+	a {
+		display: block;
+		width: 100%;
+		margin: 0 10px 10px;
+		font-family: $base-font-family;
+		font-weight: 300;
+		font-size: 30px;
+		text-transform: none;
+		padding: 20px;
+		border-width: 3px;
+
+		@include mobile {
+			width: calc(50% - 20px);
+			margin: 0 10px 20px;
+		}
+
+		@include desktop {
+			width: calc(25% - 20px);
+			margin: 0 10px;
+		}
+
+		span {
+			display: block;
+			@extend h4;
+			font-family: $base-font-family;
+			color: $light-blue;
+			margin-bottom: 5px;
+		}
+		&:hover {
+			span {
+				color: white;
+			}
+		}
+	}
+}

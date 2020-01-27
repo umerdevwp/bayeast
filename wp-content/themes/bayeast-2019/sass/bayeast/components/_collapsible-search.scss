@@ -1,0 +1,41 @@
+@mixin collapsible-search {
+    .collapsible-search {
+        display: inline-block;
+        position: relative;
+        margin-right: -6px;
+        margin-left: -1px;
+        height: 22px;
+        &__button {
+            cursor: pointer;
+            color: $light-blue;
+            position: absolute;
+            text-align: center;
+            height: 21px;
+            line-height: 21px !important;
+            right: 0;
+            font-size: 16px;
+            width: 40px;
+            padding-right: 10px;
+        }
+        &__input {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-family: "Roboto";
+            height: $utility-nav-height;
+            padding: 10px 30px 10px 20px;
+            transition: all 200ms ease-in-out;
+            width: $utility-nav-height;
+            margin-bottom: 0px;
+            margin-top: -7px;
+            &:focus {
+                outline: none;
+			}
+            &-open {
+                border: 1px solid $medium-gray;
+                width: 350px;
+
+            }
+        }
+    }
+}

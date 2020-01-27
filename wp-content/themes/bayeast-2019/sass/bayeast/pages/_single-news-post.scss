@@ -1,0 +1,92 @@
+.post-detail {
+    padding: 20px 20px 40px;
+    @include tablet {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 20px 20px 60px;
+    }
+    .news-detail_main {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        @include tablet {
+            -ms-flex-preferred-size: 55%;
+            flex-basis: 55%;
+        }
+        @include desktop {
+            -ms-flex-preferred-size: 60%;
+            flex-basis: 60%;
+        }
+        h1 {
+            margin-top: 25px;
+            margin-bottom: 14px;
+            @extend h2;
+        }
+        .post-category {
+            @extend h4;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .entry-meta {
+            font-style: italic;
+        }
+        article {
+            padding: 20px 0 0;
+            @include tablet {
+                padding: 50px 0 0;
+            }
+            ul {
+                list-style-type: disc;
+                margin-left: 30px;
+                margin-bottom: 20px;
+                li {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    .news-detail_sidebar {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        margin-top: 30px;
+        @include tablet {
+            -ms-flex-preferred-size: 35%;
+            flex-basis: 35%;
+        }
+        @include desktop {
+            -ms-flex-preferred-size: 30%;
+            flex-basis: 30%;
+        }
+        @include tablet {
+            margin-top: 60px;
+        }
+        .sidebar-content {
+            background: $light-gray;
+            padding: 25px 25px 15px;
+            a {
+                text-decoration: none;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.addtoany_content {
+    padding-top: 20px;
+    margin: 60px 0 0 0!important;
+    border-top: $base-border;
+}
+
+.addtoany_header {
+    display: inline;
+    padding-right: 10px;
+    font-weight: 500;
+}
+
+.addtoany_list {
+    line-height: 20px;
+}

@@ -1,0 +1,97 @@
+html {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: 18px;
+  line-height: $base-line-height;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark-gray;
+  font-size: modular-scale(1);
+  line-height: $heading-line-height;
+  margin: 0 0 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0 0 20px;
+  @include tablet {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 20px;
+  @include tablet {
+    font-size: 32px;
+  }
+}
+
+h3 {
+  font-family: $condensed-font-family;
+  font-size: 21px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  @include tablet {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font-family: $condensed-font-family;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+b, strong {
+  font-weight: 500;
+}
+
+a {
+  color: $action-color;
+  text-decoration-skip-ink: auto;
+  transition: color $base-duration $base-timing;
+  text-decoration: none;
+
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+
+  &:focus {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}

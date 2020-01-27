@@ -1,0 +1,67 @@
+.home-hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-position: center center;
+
+    -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
+    background-size: cover;
+    color: white;
+    height: auto;
+    position: relative;
+    text-align: center;
+    padding: 40px 0;
+
+    @include tablet {
+      height: 500px;
+    }
+    .container {
+        max-width: 850px;
+        position: relative;
+        z-index: +1;
+    }
+    &__header {
+        color: white;
+        margin-bottom: 20px;
+    }
+    &__buttons {
+      display: block;
+      margin-top: 40px;
+
+      @include tablet {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-top: 60px;
+
+      }
+      a {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto 10px;
+        @include mobile {
+          margin: 0 10px 20px;
+        }
+        @include tablet {
+          margin: 0 10px;
+        }
+      }
+    }
+    &__overlay {
+        background: rgba(#003581, .8);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}

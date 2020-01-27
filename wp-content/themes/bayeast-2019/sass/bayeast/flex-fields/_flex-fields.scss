@@ -1,0 +1,25 @@
+@import "50-50";
+@import "full-width";
+@import "image-text";
+@import "callout-repeater";
+@import "footer-callout";
+@import "employee-cards";
+@import "expand-collapse";
+@import "video-callouts";
+@import "calculator";
+
+
+
+.section-intro {
+  margin: 0 auto 30px;
+  max-width: 750px;
+  text-align: center;
+  width: 100%;
+  p {
+    margin: 0;
+  }
+
+  @include tablet {
+    margin: 0 auto 50px;
+  }
+}

@@ -1,0 +1,95 @@
+.full-width {
+  padding: 40px 0px;
+
+  @include tablet {
+    padding: 75px 0px 80px;
+  }
+
+  &.white {
+    background: white;
+    padding: 0;
+    margin: 35px 0 40px;
+
+    @include tablet {
+      margin: 75px 0 80px;
+    }
+  }
+
+  &.gray {
+    background: $light-gray;
+  }
+
+  .container {
+    max-width: 850px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  .full-width_content {
+    &.left-align {
+      text-align: left;
+    }
+    &.center-align {
+      text-align: center;
+      ul {
+        text-align: left;
+      }
+    }
+    &.right-align {
+      text-align: right;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+
+  .full-width_buttons {
+    margin-top: 30px;
+
+    a {
+      display: block;
+      margin: 10px auto 0;
+      text-align: center;
+    }
+
+    @include mobile {
+      display: table;
+      margin: 10px auto 0;
+      min-width: 225px;
+    }
+
+    @include tablet {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      margin-top: 40px;
+
+
+      a {
+        margin: 0 5px 10px;
+        min-width: 225px;
+      }
+    }
+  }
+}

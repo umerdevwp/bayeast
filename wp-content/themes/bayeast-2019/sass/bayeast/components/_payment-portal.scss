@@ -1,0 +1,21 @@
+.payment-portal {
+  background: $light-blue;
+  padding: 40px 0;
+  text-align: center;
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  h2 {
+    color: white;
+    margin-bottom: 20px;
+  }
+  a {
+    color: white;
+    text-decoration: underline;
+    &:hover {
+      opacity: .75;
+    }
+  }
+}

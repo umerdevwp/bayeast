@@ -1,0 +1,190 @@
+.expand-collapse {
+  margin: 40px 0px;
+
+  @include tablet {
+    margin: 80px 0px;
+  }
+  .container {
+    max-width: 800px;
+  }
+
+  h2 {
+    text-align: center;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  /* Style the button that is used to open and close the collapsible content */
+  .collapsible {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border: $base-border;
+    margin-top: -1px;
+    //border-top: none;
+    > i {
+      transition: transform 0.2s ease-out;
+      float: right;
+      margin-top: 5px;
+    }
+    &:first-of-type {
+      border-top: $base-border;
+    }
+  }
+  .active, .collapsible:hover {
+    background-color: $light-blue!important;
+    color: white;
+    border-color: $light-blue;
+    &:first-of-type {
+      border-top-color: $light-blue;
+    }
+  }
+
+  .active i {
+    transform: rotateZ(-180deg);
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    background-color: $light-gray;
+    border: $base-border;
+    margin-top: -1px;
+    border-top: none;
+    // border-bottom: none;
+
+    ul {
+      list-style-type: disc;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: $base-border;
+    }
+
+    .content-container {
+      padding: 20px;
+    }
+  }
+}
+
+
+.faq {
+
+  &:first-of-type {
+    .collapsible {
+      border-top: $base-border;
+    }
+
+    &:hover {
+      &:first-of-type {
+        border-top-color: $light-blue;
+      }
+    }
+  }
+  .collapsible {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border: $base-border;
+    border-top: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    > i {
+      transition: transform 0.2s ease-out;
+      float: right;
+      margin-top: 5px;
+      color: $light-blue;
+      margin-left: 20px;
+    }
+
+  }
+  .collapsible:hover {
+    background-color: $light-blue!important;
+    color: white;
+    border-color: $light-blue;
+    > i {
+      color: white;
+    }
+  }
+
+  .content {
+    display: none;
+    padding: 20px;
+    background-color: $light-gray;
+    border: $base-border;
+    border-top: none;
+
+    ul {
+      list-style-type: disc;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    p {
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  .collapsible.active {
+
+      background-color: $light-blue!important;
+      color: white;
+      border-color: $light-blue;
+      &:first-of-type {
+        border-top-color: $light-blue;
+      }
+
+
+    i {
+      transform: rotateZ(-180deg);
+      color: white;
+    }
+
+    .content {
+      //max-height: 100%;
+    }
+  }
+}
+
+.faqs-group {
+  .posts-listing_container {
+    padding: 40px 20px;
+    @include tablet {
+      padding: 80px 20px;
+    }
+  }
+}
+
+.faq-list {
+  h2 {
+    text-align: center;
+  }
+}

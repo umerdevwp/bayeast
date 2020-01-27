@@ -1,0 +1,31 @@
+.footer-callout {
+  background-color: $light-blue;
+  padding: 40px 0;
+
+  @include tablet {
+    padding: 120px 0;
+  }
+
+  .container {
+    max-width: 750px;
+    text-align: center;
+  }
+
+  h2 {
+    @extend h1;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #ffffff;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: underline;
+    &:hover {
+      opacity: .75;
+    }
+  }
+}

@@ -1,0 +1,341 @@
+#user-menu {
+  .member-portal-menu {
+    position: relative;
+    margin-left: 5px;
+    border-left: $base-border;
+    padding-left: 18px;
+    line-height: 20px;
+    .divider {
+      background-color: #d8d8d8;
+      height: 1px;
+      width: 100%;
+      display: block;
+      margin: 15px 0 15px;
+    }
+    li.dropdown {
+
+      > a {
+        font-size: 14px;
+        text-decoration: none;
+        i.fa-user {
+          padding-right: 5px;
+          font-size: 16px;
+        }
+      }
+
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background: $light-gray;
+      z-index: 99999;
+      padding: 20px 20px 5px;
+      white-space:nowrap;
+      right: 0;
+
+      li {
+        font-family: 'Roboto';
+        font-size: 15px;
+        font-weight: 300;
+        text-transform: none;
+        max-width: none;
+        margin-bottom: 10px;
+
+        a {
+          text-decoration: none;
+          display: block;
+
+          i {
+            padding-right: 5px;
+          }
+        }
+
+        ul {
+          display: grid;
+          grid-auto-flow: column;
+        	grid-column-gap: 15px;
+        	grid-template-columns: repeat(3, 1fr);
+        	grid-template-rows: repeat(10, auto);
+
+          > li {
+            margin-bottom: 0px;
+            a {
+              color: $dark-gray;
+              font-family: $condensed-font-family;
+              text-transform: uppercase;
+              font-weight: 500;
+              font-size: 14px;
+              margin-bottom: 0;
+              padding: 5px 0px;
+              &:hover {
+                color: $light-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#mem-account-container {
+
+  @include tablet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  #account-nav-container {
+    width: 100%;
+    background: $blue;
+    margin: 0;
+
+    @include tablet {
+      width: 250px;
+    }
+  }
+
+  #account-info-container {
+    width: 100%;
+
+    h3 {
+      font-weight: 400;
+    }
+    p {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      width: calc(100% - 250px);
+    }
+    #portalIframe {
+      width: 100%;
+      border: none;
+      height: auto;
+      min-height: 700px;
+    }
+  }
+}
+
+
+
+/******* ACCOUNT PAGE ********
+==============================================================================
+*/
+
+#member-menu{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 18px;
+    vertical-align: top;
+    list-style-type: none;
+    //background-color: #22282b;
+    color: #747576;
+    //font-weight: 800;
+    border-radius: 0px;
+    //font-family: "Helvetica Neue", Arial, Verdana, "Nimbus Sans L", sans-serif;
+
+    > li {
+      border-top: 1px solid rgba(255,255,255,.15);
+      position: relative;
+      margin-bottom: 0px;
+
+
+      &:before {
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        left: 20px;
+        top: 9px;
+        position: absolute;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      &:hover {
+        background-color: darken($blue, 5%);
+      }
+
+      > a {
+        padding: 10px 20px 10px 50px;
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        i {
+          padding-right: 10px;
+        }
+      }
+      &:last-of-type {
+        border-bottom: 1px solid rgba(255,255,255,.15);
+      }
+
+      &.open {
+        > a {
+          position: relative;
+          &:after {
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 400;
+            content: '\f078';
+            cursor: pointer;
+            color: white;
+            right: 20px;
+            position: absolute;
+            transform: rotateZ(-180deg);
+          }
+        }
+      }
+
+      &.my-profile {
+        &:before {
+          content: '\f007';
+        }
+      }
+
+      &.payment {
+        &:before {
+          content: '\f53a';
+          font-weight: 400;
+        }
+      }
+
+      &.classes {
+        &:before {
+          content: '\f19d';
+        }
+      }
+
+      &.menu-item-has-children {
+
+        > a {
+          position: relative;
+          &:after {
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 400;
+            content: '\f078';
+            cursor: pointer;
+            color: white;
+            right: 20px;
+            position: absolute;
+            transition: all .3s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .sub-menu {
+      border-top: 1px solid rgba(255,255,255,.15);
+      display: none;
+      padding: 15px 20px;
+      background-color: #001e48;
+      list-style-type: none;
+      margin-left: 0px;
+      li {
+        margin-bottom: 0px;
+      }
+      a {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 10px 0;
+        display: block;
+        &:hover {
+          color: $light-blue;
+        }
+      }
+    }
+}
+
+
+#account-name-div {
+  padding: 20px;
+}
+
+.account-initials {
+    border-radius: 100%;
+    margin: 0 auto 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: "Roboto", Verdana, sans-serif;
+    text-transform: uppercase;
+
+    @include tablet {
+      display: block;
+    }
+}
+
+.account-initials.small {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+.account-initials.medium {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+}
+.account-initials.large {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+}
+
+#account-name {
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    text-align: left;
+    margin-left: 10px;
+    @include tablet {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+}
+
+#account-name span {
+    display: block;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-family: $base-font-family;
+    color: white;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+#account-activity {
+    margin-top: 20px;
+}
+
+#account-activity li {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+#account-activity li p {
+    color: #29a4db;
+    font-size: 16px;
+}
+
+
+/*======[END ACCOUNT PAGE]======*/

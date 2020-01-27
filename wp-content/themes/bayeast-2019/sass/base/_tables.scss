@@ -1,0 +1,121 @@
+table {
+  width: 100%;
+}
+
+thead {
+  vertical-align: bottom;
+  font-size: 14px;
+
+}
+
+tbody {
+  vertical-align: top;
+}
+
+tr {
+  border-bottom: $base-border;
+}
+
+th {
+  font-weight: 600;
+}
+
+th,
+td {
+  padding: 10px 0;
+}
+
+.tablepress-table-name {
+  text-align: left!important;
+  @extend h3;
+}
+
+.tablepress {
+  thead {
+    border: $base-border;
+    font-family: $condensed-font-family;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+
+    .column-1 {
+      text-align: left;
+    }
+
+    th {
+      background-color: darken($light-gray, 5%)!important;
+      text-align: center;
+    }
+  }
+
+  tbody {
+    border: $base-border;
+    font-size: 14px;
+
+    td {
+      vertical-align: middle;
+      border-left: $base-border;
+      text-align: center;
+    }
+
+    .column-1 {
+      text-align: left;
+    }
+
+    td[colspan="3"] {
+      text-align: center;
+      background: darken($light-gray, 5%);
+      text-transform: uppercase;
+      font-family: $condensed-font-family;
+      font-weight: 600;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+
+    }
+  }
+}
+
+#tablepress-1 {
+  thead {
+    border: none;
+    font-family: $condensed-font-family;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+  }
+  .row-1 .column-1 {
+    background-color: transparent!important;
+  }
+
+  .row-1 .column-2 {
+    background-color: $light-blue!important;
+    border-left: none;
+    color: white;
+    text-align: center;
+  }
+
+  .column-2 ,
+  .column-3 {
+    max-width: 100px;
+    width: 100px;
+    text-align: center;
+    border-left: $base-border;
+    @include mobile {
+      max-width: 125px;
+      width: 125px;
+    }
+    i {
+      color: $light-blue;
+    }
+  }
+
+  .row-1 .column-3{
+    background-color: $light-gray;
+    text-align: center;
+    border-top: $base-border;
+    border-right: $base-border;
+    border-left: none;
+  }
+
+
+}

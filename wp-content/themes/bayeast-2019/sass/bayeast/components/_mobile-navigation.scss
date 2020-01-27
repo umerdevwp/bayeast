@@ -1,0 +1,322 @@
+.sidr {
+    #mobile-menu-utility {
+        margin-top: 10px;
+        li {
+            border: none;
+            font-family: "Roboto";
+            font-weight: 400;
+            height: auto;
+            line-height: normal;
+            margin-top: auto;
+            padding-right: 0;
+            text-transform: none;
+            a {
+                font-size: 18px;
+                letter-spacing: 1px;
+                padding: 20px 0px;
+                &:before {
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    font-weight: 900;
+                    margin-right: 10px;
+                    content: "\f0e0";
+                    font-family: "Font Awesome 5 Pro";
+                    font-size: 16px;
+                }
+                &:after {
+                    content: ""
+                }
+            }
+        }
+    }
+    .collapsible-search {
+      padding: 10px 20px 10px;
+      position: relative;
+      &__input {
+			border: 1px solid white;
+			color: white;
+			font-family: "Roboto";
+			line-height: 20px;
+			padding-left: 50px;
+      background-color: #54adff;
+            &::placeholder {
+                color: white;
+            }
+      }
+        &__button {
+            left: 40px;
+            position: absolute;
+            top: 32px;
+        }
+        .search-submit {
+            display: none;
+        }
+    }
+}
+
+
+
+.mobile-navigation,
+.mobile-user-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  @include desktop {
+    display: none;
+  }
+
+  .mobile_user__menuToggle {
+    .menu-toggle {
+      > i {
+        font-size: 24px;
+        padding: 5px 10px;
+        line-height: 1;
+        color: $light-blue;
+      }
+    }
+  }
+
+  .mobile-navigation__menuToggle {
+    .menu-toggle.menu-open {
+      span {
+        display: none;
+        height: 3px;
+        width: 30px;
+        top: 10px;
+        background: $light-blue;
+        position: relative;
+        transform: rotate(45deg);
+        &:first-of-type {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          top: 10px;
+          transform: rotate(45deg);
+        }
+        &:last-of-type {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          top: 7px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .menu-toggle {
+      display: block;
+      height: 35px;
+      box-sizing: border-box;
+      padding: 5px 0 5px 5px;
+      margin-left: 5px;
+      @include desktop {
+        display: none;
+      }
+      span {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        height: 3px;
+        width: 30px;
+        top: 7px;
+        background:$light-blue;
+        position: relative;
+        transition: all .2s ease-in-out;
+        &:first-of-type {
+          top: 0px;
+        }
+        &:last-of-type {
+          top: 14px;
+        }
+      }
+    }
+  }
+}
+
+
+.sidr-open,
+.sidr-animating {
+  // right: 0!important;
+  // top: 0;
+   position: fixed!important;
+}
+
+#sidr-main {
+  #user-menu {
+    display: none;
+  }
+}
+
+.sidr {
+  display: block;
+  position: fixed;
+  top: 0!important;
+  height: 100%;
+  z-index: 999999;
+  width: calc(100% - 110px);
+  background: $light-blue;
+  color: white;
+  overflow: scroll;
+  .site-branding {
+    display: none;
+  }
+  .sidr-inner {
+
+    .login-button {
+      @extend .button-inverse;
+      width: calc(100% - 40px);
+      margin: 10px auto 30px;
+      display: block;
+    }
+
+    &:last-of-type:not(:only-of-type) {
+      border-top: 1px solid white;
+      padding-top: 10px;
+      margin-top: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      form {
+        order: 2;
+      }
+      .utility-navigation__contact {
+        height: auto;
+        line-height: 1;
+        border: none;
+        a {
+          padding: 20px 0;
+          &:before {
+            font-family: "Font Awesome 5 Pro";
+            font-size: 16px;
+            font-weight: 900;
+            content: "\f0e0";
+            padding-right: 10px;
+          }
+          &:after {
+            content: '';
+          }
+          &:hover {
+            color: rgba(255,255,255,.5);
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    ul {
+      margin: 0 0 0 0;
+      padding: 0;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .current-menu-item,
+    .current-page-parent {
+      > a {
+        background-color: darken($light-blue, 10%);
+        color: white;
+      }
+    }
+    .current-menu-parent {
+      .sub-menu {
+        display: block;
+      }
+    }
+  }
+
+  &.right {
+    left: auto;
+    right: calc(-100% + 110px);
+  }
+
+  .dropdown-menu {
+    .divider {
+      background: white;
+      height: 1px;
+      width: 100%;
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+  .dropdown-menu li,
+  .menu-item {
+    display: block;
+    text-align: left;
+    -webkit-font-smoothing: initial;
+    &:before {
+      content: '';
+    }
+    a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 300;
+      i {
+        padding-right: 10px;
+      }
+      &:hover {
+        background-color: darken($light-blue, 10%);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .menu-item-has-children {
+    // border-bottom: transparent;
+    position: relative;
+    &:before {
+      color: white;
+      position: absolute;
+      top: 15px;
+      right: 28px;
+      font-size: 12px;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 400;
+      content: '\f078';
+      cursor: pointer;
+    }
+    ul {
+      //margin: 0 0 20px!important;
+      padding: 10px 0;
+      transition: none;
+      li {
+        border-bottom: transparent;
+
+        &.current-menu-item a {
+          background-color: transparent;
+          color: rgba(255,255,255,.5);
+        }
+
+      }
+      display: none;
+      background: darken($light-blue, 20%);
+      a {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: none;
+        &:hover {
+          background-color: transparent;
+          color: rgba(255,255,255,.5);
+        }
+      }
+    }
+  }
+}

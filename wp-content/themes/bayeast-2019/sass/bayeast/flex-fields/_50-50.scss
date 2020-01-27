@@ -1,0 +1,87 @@
+.fifty-fifty {
+  margin: 40px auto;
+
+  @include tablet {
+    margin: 80px auto;
+  }
+
+  &.gray {
+    background-color: $light-gray;
+    margin: 0px auto;
+    padding: 40px 0px;
+
+    @include tablet {
+      margin: 0px auto;
+      padding: 80px 0px;
+    }
+  }
+
+  .fifty-fifty_blocks {
+    display: block;
+
+    @include tablet {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    h3 {
+      font-weight: 400;
+    }
+
+    .fifty-fifty-left {
+      margin-bottom: 40px;
+      @include tablet {
+        -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+        margin-bottom: 0px;
+      }
+      ul {
+        list-style-type: disc;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .fifty-fifty-right {
+      @include tablet {
+        -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+      }
+      ul {
+        list-style-type: disc;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    a.button {
+      display: table;
+      margin: 30px auto 0;
+      text-align: center;
+      min-width: 100%;
+
+      @include mobile {
+        margin: 10px auto 0;
+        min-width: 225px;
+      }
+
+      @include tablet {
+        margin: 70px auto 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+header.site-header {
+    position: fixed;
+    background: white;
+    width: 100%;
+    height: 68px;
+    z-index: 99999;
+    top: 0;
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    @include desktop {
+      height: 97px;
+    }
+
+    .header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 10px 20px;
+      align-items: center;
+
+      @include desktop {
+        padding: 0px 20px;
+      }
+    }
+
+
+
+    div.site-branding {
+
+
+      &::before {
+          display: none;
+      }
+
+      &:hover {
+        opacity: .75;
+      }
+
+      a, img {
+        display: block;
+      }
+
+      @include desktop {
+        -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+      }
+    }
+
+    div.site-nav {
+
+
+      &::before {
+          display: none;
+      }
+
+      @include desktop {
+        -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+      }
+    }
+}

@@ -1,0 +1,113 @@
+.hero-area {
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  // display: flex;
+  // -webkit-box-align: center;
+  // -ms-flex-align: center;
+  // align-items: center;
+  position: relative;
+  text-align: center;
+  background-color: #003581;
+  background-size: cover;
+  background-repeat: no-repeat;
+//  flex-direction: row;
+
+  @include tablet {
+    min-height: 400px;
+  }
+
+  &.has-additional-content {
+    .hero-area_hero-content {
+      margin: 0 auto;
+      max-width: 650px;
+      text-align: center;
+      width: 100%;
+      @include tablet {
+        margin: 0;
+        padding-right: 40px;
+        text-align: left;
+      }
+    }
+  }
+
+  .container {
+    padding: 80px 20px 80px;
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 100px 20px;
+      min-height: 400px;
+    }
+  }
+
+  &_hero-content {
+    color: white;
+    margin: 0 auto;
+    max-width: 775px;
+    vertical-align: middle;
+
+    h1 {
+      color: #ffffff;
+      margin-bottom: 10px;
+      @include tablet {
+        margin-bottom: 25px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 28px;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      @include tablet {
+        font-size: 21px;
+        line-height: 31px;
+      }
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+
+  &_additional-content {
+    background: white;
+    margin-top: 30px;
+    padding: 30px;
+    width: 100%;
+    @include tablet {
+      margin: 0;
+      max-width: 400px;
+      padding: 40px;
+    }
+
+    p:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .hero-overlay {
+    background: rgba(#003581, .8);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+}
